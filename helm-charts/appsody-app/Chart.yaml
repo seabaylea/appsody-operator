@@ -1,0 +1,12 @@
+apiVersion: v1
+appVersion: 1.0.0
+description: A default Appsody App chart.
+icon: https://secure.gravatar.com/avatar/819ff2eefd3ade70d3d74bb19c89d9bd?s=64
+keywords:
+- Appsody
+- Cloud Native
+- Apps
+kubeVersion: '>=1.9.0'
+name: appsody-app
+tillerVersion: '>=2.6.0'
+version: 1.1.2

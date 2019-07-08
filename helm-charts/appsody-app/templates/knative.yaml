@@ -1,0 +1,15 @@
+{{- if .Values.replicaCount }}
+{{- else }} 
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  name: {{ template "appsody.fullname" . }}
+spec:
+  runLatest:
+    configuration:
+      revisionTemplate:
+        spec:
+          container:
+            image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+            imagePullPolicy: {{ .Values.image.pullPolicy }}
+{{- end }}
